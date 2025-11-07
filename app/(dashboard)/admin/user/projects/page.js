@@ -9,7 +9,7 @@ const AgencyProjects = async ({ searchParams }) => {
     return (
         <>
             <Container className={'bg-white px-4 py-3'}>
-                <h1 className="font-bold text-2xl md:text-4xl">Agency Projects</h1>
+                <h1 className="font-bold text-2xl md:text-4xl">Company Projects</h1>
 
                 <div className='grid grid-cols-1 md:grid-cols-4 gap-4 mt-6'>
                     {projects?.map(project => (

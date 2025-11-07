@@ -52,12 +52,12 @@ const NewProjectForm = ({ partners, user, service, fields }) => {
 
                         {user?.role === 'superadmin' && <div className="flex flex-col gap-2">
                             <Label className="block font-medium">
-                                For Which Partner<span className="text-red-500">*</span>
+                                For Which Company<span className="text-red-500">*</span>
                             </Label>
                             <Select value={value}
                                 onValueChange={(val) => setValue(val)}>
                                 <SelectTrigger className={'border border-gray-300 w-full'}>
-                                    <SelectValue placeholder="Select Partner" />
+                                    <SelectValue placeholder="Select Company" />
                                 </SelectTrigger>
                                 <SelectContent>
                                     {partners?.map(partner => (
@@ -121,7 +121,7 @@ const NewProjectForm = ({ partners, user, service, fields }) => {
                                         onValueChange={(val) => setSelectedPackage(val)} name="selectedPackage" required className="space-y-3">
                                         {pricing?.pricing.map((priceOption) => (
 
-                                            <div key={priceOption.id} className='border border-gray-200 rounded-lg hover:border-red transition-colors'>
+                                            <div key={priceOption.id} className='border border-gray-200 rounded-lg hover:border-primary transition-colors'>
                                                 <div className="flex items-start space-x-3 p-4 ">
                                                     <RadioGroupItem
                                                         value={priceOption.price}
@@ -140,7 +140,7 @@ const NewProjectForm = ({ partners, user, service, fields }) => {
 
                                                             </div>
                                                         </Label>
-                                                        <span className="font-bold text-red text-lg">
+                                                        <span className="font-bold text-background text-lg">
                                                             {priceOption.price}{" "}
                                                             <span className="text-sm font-normal text-gray-500">
                                                                 {priceOption.period}

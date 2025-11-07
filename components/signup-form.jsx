@@ -37,7 +37,6 @@ export function SignUpForm({
         yearsInBiz: "",
         numOfActiveClients: "",
         socialMediaLinks: "",
-        companyStructure: "sole-trader",
         primaryServices: "",
         industriesWorkWith: "",
         regionsServe: "",
@@ -151,11 +150,11 @@ export function SignUpForm({
 
                     {step === 60 && (
                         <>
-                            {/* Agency Details */}
+                            {/* Company Details */}
 
                             <div className="grid gap-3">
                                 <div className="flex items-center gap-1">
-                                    <Label htmlFor="companyName" className={'text-foreground'}>Agency Name</Label>
+                                    <Label htmlFor="companyName" className={'text-foreground'}>Company Name</Label>
                                     <span className="text-red">*</span>
                                 </div>
                                 <Input id="companyName" type="text" value={formValues.companyName} onChange={handleChange} name="companyName" className={'border border-gray-300 text-foreground'} required />
@@ -164,9 +163,9 @@ export function SignUpForm({
                             <div className="grid gap-3">
                                 <div className="flex items-center gap-1">
                                     <Label htmlFor="abn" className={'text-foreground'}>ABN (Australian Business Number)</Label>
-                                    <span className="text-red">*</span>
+                                    {/* <span className="text-red">*</span> */}
                                 </div>
-                                <Input id="abn" type="number" value={formValues.abn} onChange={handleChange} name="abn" required className={'border border-gray-300 text-foreground'} />
+                                <Input id="abn" type="number" value={formValues.abn} onChange={handleChange} name="abn" className={'border border-gray-300 text-foreground'} />
                             </div>
 
                             <div className="grid gap-3">
@@ -193,20 +192,20 @@ export function SignUpForm({
                                 <Input id="yearsInBiz" type="number" value={formValues.yearsInBiz} onChange={handleChange} name="yearsInBiz" required className={'border border-gray-300 text-foreground'} />
                             </div>
 
-                            <div className="grid gap-3">
+                            {/* <div className="grid gap-3">
                                 <div className="flex items-center gap-1">
                                     <Label htmlFor="numOfActiveClients" className={'text-foreground'}>Approximate number of active clients</Label>
                                     <span className="text-red">*</span>
                                 </div>
                                 <Input id="numOfActiveClients" type="number" value={formValues.numOfActiveClients} onChange={handleChange} name="numOfActiveClients" required className={'border border-gray-300 text-foreground'} />
-                            </div>
+                            </div> */}
 
                             <div className="grid gap-3">
                                 <Label htmlFor="socialMediaLinks" className={'text-foreground'}>Social Media Links (if applicable)</Label>
                                 <Textarea id="socialMediaLinks" value={formValues.socialMediaLinks} onChange={handleChange} name="socialMediaLinks" className={'border border-gray-300 text-foreground'} />
                             </div>
 
-                            <div className="grid gap-3">
+                            {/* <div className="grid gap-3">
                                 <div className="flex items-center gap-1">
                                     <Label className={'text-foreground'}>Company Structure</Label>
                                     <span className="text-red">*</span>
@@ -217,22 +216,22 @@ export function SignUpForm({
                                 }))}>
                                     <div className="flex items-center space-x-2">
                                         <RadioGroupItem value="sole-trader" id="sole-trader" />
-                                        <Label className={'font-normal'} htmlFor="sole-trader">Sole Trader</Label>
+                                        <Label className={'font-normal text-foreground'} htmlFor="sole-trader">Sole Trader</Label>
                                     </div>
                                     <div className="flex items-center space-x-2">
                                         <RadioGroupItem value="partner-ship" id="partner-ship" />
-                                        <Label className={'font-normal'} htmlFor="partner-ship">Partnership</Label>
+                                        <Label className={'font-normal text-foreground'} htmlFor="partner-ship">Partnership</Label>
                                     </div>
                                     <div className="flex items-center space-x-2">
                                         <RadioGroupItem value="pty-ltd" id="pty-ltd" />
-                                        <Label className={'font-normal'} htmlFor="pty-ltd">Pty Ltd.</Label>
+                                        <Label className={'font-normal text-foreground'} htmlFor="pty-ltd">Pty Ltd.</Label>
                                     </div>
                                     <div className="flex items-center space-x-2">
                                         <RadioGroupItem value="other" id="other" />
-                                        <Label className={'font-normal'} htmlFor="other">Other</Label>
+                                        <Label className={'font-normal text-foreground'} htmlFor="other">Other</Label>
                                     </div>
                                 </RadioGroup>
-                            </div>
+                            </div> */}
                         </>
                     )}
 
@@ -243,7 +242,7 @@ export function SignUpForm({
 
                             <div className="grid gap-3">
                                 <div className="flex items-center gap-1">
-                                    <Label htmlFor="primaryServices" className={'text-foreground'}>Primary Services Your Agency Offers</Label>
+                                    <Label htmlFor="primaryServices" className={'text-foreground'}>Primary Services Your Company Offers</Label>
                                     <span className="text-red">*</span>
                                 </div>
                                 <Textarea id="primaryServices" value={formValues.primaryServices} onChange={handleChange} name="primaryServices" required className={'border border-gray-300 text-foreground'} />
@@ -273,37 +272,41 @@ export function SignUpForm({
                                 }))}>
                                     <div className="flex items-center space-x-2">
                                         <RadioGroupItem value="retainer-based" id="retainer-based" />
-                                        <Label className={'font-normal'} htmlFor="retainer-based">Retainer Based</Label>
+                                        <Label className={'font-normal text-foreground'} htmlFor="retainer-based">Retainer Based</Label>
                                     </div>
                                     <div className="flex items-center space-x-2">
                                         <RadioGroupItem value="project-based" id="project-based" />
-                                        <Label className={'font-normal'} htmlFor="project-based">Project Based</Label>
+                                        <Label className={'font-normal text-foreground'} htmlFor="project-based">Project Based</Label>
                                     </div>
                                     <div className="flex items-center space-x-2">
-                                        <RadioGroupItem value="both" id="both" />
-                                        <Label className={'font-normal'} htmlFor="both">Both</Label>
+                                        <RadioGroupItem value="project-based" id="project-based" />
+                                        <Label className={'font-normal text-foreground'} htmlFor="product-based">Product Based</Label>
+                                    </div>
+                                    <div className="flex items-center space-x-2">
+                                        <RadioGroupItem value="all" id="all" />
+                                        <Label className={'font-normal text-foreground'} htmlFor="all">All</Label>
                                     </div>
                                 </RadioGroup>
                             </div>
 
-                            <div className="grid gap-3">
+                            {/* <div className="grid gap-3">
                                 <Label htmlFor="monthlyProjectVolume" className={'text-foreground'}>Anticipated Monthly Project Volume for Invenza (Optional)</Label>
                                 <Input id="monthlyProjectVolume" value={formValues.monthlyProjectVolume} onChange={handleChange} type="text" name="monthlyProjectVolume" className={'border border-gray-300 text-foreground'} />
-                            </div>
+                            </div> */}
 
                             <div className="grid gap-3">
-                                <Label className={'text-foreground'}>Do you currently use any other white label providers?</Label>
+                                <Label className={'text-foreground'}>Do you currently use any other marketing agency?</Label>
                                 <RadioGroup name="isUsingWhiteLabelProvider" value={formValues.isUsingWhiteLabelProvider} onValueChange={(value) => setFormValues(prev => ({
                                     ...prev,
                                     isUsingWhiteLabelProvider: value
                                 }))}>
                                     <div className="flex items-center space-x-2">
                                         <RadioGroupItem value="yes" id="yes" />
-                                        <Label className={'font-normal'} htmlFor="yes">Yes</Label>
+                                        <Label className={'font-normal text-foreground'} htmlFor="yes">Yes</Label>
                                     </div>
                                     <div className="flex items-center space-x-2">
                                         <RadioGroupItem value="no" id="no" />
-                                        <Label className={'font-normal'} htmlFor="no">No</Label>
+                                        <Label className={'font-normal text-foreground'} htmlFor="no">No</Label>
                                     </div>
                                 </RadioGroup>
                             </div>

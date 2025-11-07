@@ -23,6 +23,17 @@ body {
   text-decoration: underline;
 }
 
+aside::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 15.4%;
+  height: 90%;
+  width: 1px;
+  background-color: oklch(0.9611 0.2114 111.2239);
+  /* or use Tailwind's color */
+}
+
 @theme {
   --color-background-gray: #E8E8E8;
   --color-dark-blue: #2D2F39;
