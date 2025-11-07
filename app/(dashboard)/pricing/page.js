@@ -1,0 +1,29 @@
+import Container from "@/components/dashboardComponents/Container"
+import PricingPDF from "@/components/dashboardComponents/PricingPDF";
+import { ArrowDown } from 'lucide-react';
+
+const PricingPage = () => {
+    return (
+        <Container className={'bg-white p-4 mt-6 h-[80vh]'}>
+            <a className="mb-2 float-right" href={"/stratital-pricelist.pdf"} download="Invenza Pricelist" target='_blank' rel="noopener noreferrer">
+                <button
+                    className="bg-white text-center w-48 rounded-2xl h-14 relative text-black text-xl font-semibold group cursor-pointer"
+                    type="button"
+                >
+                    <div
+                        className="bg-primary rounded-xl h-12 w-1/4 flex items-center justify-center absolute left-1 top-[4px] group-hover:w-[184px] z-10 duration-500"
+                    >
+                        <ArrowDown color="#000000" />
+                    </div>
+                    <p className="translate-x-2 text-sm">Download</p>
+                </button>
+
+            </a>
+            <div className="w-full h-full">
+                <PricingPDF />
+            </div>
+        </Container>
+    )
+}
+
+export default PricingPage
