@@ -39,7 +39,7 @@ const ProjectDetailPage = async ({ params, searchParams }) => {
 
     return (
         <>
-            <Container className={'bg-white p-4 overflow-x-hidden'}>
+            <Container className={'bg-white max-sm:max-w-[430px] p-4 overflow-x-hidden'}>
                 <div className='flex md:flex-row flex-col items-start md:items-end justify-between'>
                     <div>
                         <div className='flex items-center gap-2'>
@@ -56,7 +56,7 @@ const ProjectDetailPage = async ({ params, searchParams }) => {
                         }
                     </div>
                     <div className='flex items-start md:items-center md:flex-row flex-col gap-2 md:gap-4'>
-                        <p className='text-red font-medium animate-pulse whitespace-nowrap'>• {status}</p>
+                        <p className='text-background font-medium animate-pulse whitespace-nowrap'>• {status}</p>
                         {user?.role === 'superadmin' && <ProjectStatusForms status={status} projectId={id} />}
                         {user?.role === 'superadmin' && <ArchiveProjectForm projectId={id} />}
                     </div>

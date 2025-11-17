@@ -13,8 +13,6 @@ const InvoicesPage = async () => {
     const initialInvoices = await getAllInvoices();
     const partners = await getAllSimpleUsers();
 
-    console.log(initialInvoices)
-
     return (
         <div className="p-4">
             <h1 className="text-2xl font-bold mb-4">Invoices</h1>

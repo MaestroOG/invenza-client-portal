@@ -26,18 +26,18 @@ const CreateDiscussionForm = () => {
             <form action={formAction} className='grid gap-4'>
                 <div className='grid gap-2'>
                     <Label htmlFor="topic">Discussion Topic</Label>
-                    <Input id='topic' name='discussionTopic' type="text" placeholder="Enter topic here" className={'w-2xl max-w-2xl'} required />
+                    <Input id='topic' name='discussionTopic' type="text" placeholder="Enter topic here" className={'w-full md:max-w-2xl'} required />
                 </div>
                 <div className='grid gap-2'>
                     <Label htmlFor="title">Discussion Title</Label>
-                    <Input type="text" id='title' name='discussionTitle' placeholder="Enter title here" className={'w-2xl max-w-2xl'} required />
+                    <Input type="text" id='title' name='discussionTitle' placeholder="Enter title here" className={'w-full md:max-w-2xl'} required />
                 </div>
                 <div className='grid gap-2'>
                     <Label htmlFor="subtitle">Discussion Subtitle</Label>
-                    <Input type="text" id='subtitle' name='discussionSubtitle' placeholder="Enter subtitle here" className={'w-2xl max-w-2xl'} required />
+                    <Input type="text" id='subtitle' name='discussionSubtitle' placeholder="Enter subtitle here" className={'w-full md:max-w-2xl'} required />
                 </div>
 
-                <Button disabled={isPending} type='submit' className={'w-2xl max-w-2xl'}>Create Discussion</Button>
+                <Button disabled={isPending} type='submit' className={'w-full md:max-w-2xl'}>Create Discussion</Button>
             </form>
 
             <Dialog open={open} onOpenChange={setOpen}>

@@ -62,7 +62,7 @@ const CreateTaskForm = ({ users }) => {
             <form action={formAction} className="grid gap-4">
                 <div className="grid gap-2">
                     <Label htmlFor='title'>Task Title</Label>
-                    <Input type={'text'} name='title' className={'w-2xl max-w-2xl'} required />
+                    <Input type={'text'} name='title' className={'w-full md:max-w-2xl'} required />
                 </div>
                 <div className="grid gap-2">
                     <Label htmlFor='description'>Task Description</Label>
@@ -72,7 +72,7 @@ const CreateTaskForm = ({ users }) => {
                         tabIndex={1}
                         onBlur={newContent => setDescription(newContent)}
                         onChange={newContent => { }}
-                        className="w-2xl max-w-2xl"
+                        className="w-full md:max-w-2xl"
                     />
                 </div>
                 <div className="flex flex-col gap-3">
@@ -84,7 +84,7 @@ const CreateTaskForm = ({ users }) => {
                             <Button
                                 variant="outline"
                                 id="dueDate"
-                                className="w-2xl max-w-2xl justify-between font-normal"
+                                className="w-full md:max-w-2xl justify-between font-normal"
                             >
                                 {date ? date.toLocaleDateString() : "Select date"}
                                 <ChevronDownIcon />
@@ -108,7 +108,7 @@ const CreateTaskForm = ({ users }) => {
                 <div className="grid gap-2">
                     <Label htmlFor='status'>Task Status</Label>
                     <Select value={status} onValueChange={(val) => setStatus(val)}>
-                        <SelectTrigger className="w-2xl max-w-2xl">
+                        <SelectTrigger className="w-full md:max-w-2xl">
                             <SelectValue placeholder="Select Status" />
                         </SelectTrigger>
                         <SelectContent>
@@ -147,7 +147,7 @@ const CreateTaskForm = ({ users }) => {
                 <input type="hidden" name="status" value={status} />
                 <input type="hidden" name='description' value={description} />
 
-                <Button disabled={isPending} type='submit' className={'w-2xl max-w-2xl'}>Add Task</Button>
+                <Button disabled={isPending} type='submit' className={'w-full md:max-w-2xl'}>Add Task</Button>
             </form>
 
             <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>

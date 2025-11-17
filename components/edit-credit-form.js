@@ -43,7 +43,7 @@ const EditCreditForm = ({ users }) => {
                 <div className="grid gap-2">
                     <Label htmlFor="partner">Select Partner</Label>
                     <Select value={selectedUserId} onValueChange={handleUserSelect}>
-                        <SelectTrigger id='partner' className={'w-2xl max-w-2xl'}>
+                        <SelectTrigger id='partner' className={'w-full md:max-w-2xl'}>
                             <SelectValue placeholder="Select Partner" />
                         </SelectTrigger>
                         <SelectContent>
@@ -63,11 +63,11 @@ const EditCreditForm = ({ users }) => {
                                 type="number"
                                 defaultValue={credit}
                                 onChange={(e) => setCredit(e.target.value)}
-                                className={'max-w-2xl'}
+                                className={'w-full md:max-w-2xl'}
                             />
                         </div>
 
-                        <Button disabled={isPending} type="submit" className='max-w-2xl'>Update Credit</Button>
+                        <Button disabled={isPending} type="submit" className='w-full md:max-w-2xl'>Update Credit</Button>
                     </>
                 )}
 

@@ -20,7 +20,7 @@ const FAQPage = () => {
             <div className="flex items-center justify-between gap-4">
                 <h1 className="text-xl font-medium">FAQs</h1>
                 <div>
-                    <Input type="text" placeholder="Search FAQs..." className={'w-2xl text-background placeholder:text-muted-background'} value={searchTerm}
+                    <Input type="text" placeholder="Search FAQs..." className={'w-full md:max-w-2xl text-background placeholder:text-muted-background'} value={searchTerm}
                         onChange={e => setSearchTerm(e.target.value)} />
                 </div>
             </div>

@@ -36,7 +36,7 @@ const AssignCreditForm = ({ users }) => {
                 <div className="grid gap-2">
                     <Label htmlFor="partner">Select Partner</Label>
                     <Select value={value} onValueChange={setValue}>
-                        <SelectTrigger id='partner' className={'w-2xl max-w-2xl'}>
+                        <SelectTrigger id='partner' className={'w-full md:max-w-2xl'}>
                             <SelectValue placeholder="Select Partner" />
                         </SelectTrigger>
                         <SelectContent>
@@ -50,10 +50,10 @@ const AssignCreditForm = ({ users }) => {
                 {value && <>
                     <div className="grid gap-2">
                         <Label htmlFor="creditValue">Credit Amount</Label>
-                        <Input type="number" id='creditValue' name='creditValue' className='max-w-2xl' min="0.01" step="0.01" required placeholder="Enter credit amount" />
+                        <Input type="number" id='creditValue' name='creditValue' className='w-full md:max-w-2xl' min="0.01" step="0.01" required placeholder="Enter credit amount" />
                     </div>
                     <input type="hidden" name="partnerId" value={value} />
-                    <Button disabled={isPending} type="submit" className='max-w-2xl'>Assign Credit</Button>
+                    <Button disabled={isPending} type="submit" className='w-full md:max-w-2xl'>Assign Credit</Button>
                 </>
                 }
 

@@ -38,7 +38,7 @@ const ResourcesPage = async ({ searchParams }) => {
 
             <Tabs defaultValue="all" className="w-full">
                 {/* --- Tabs --- */}
-                <TabsList className="grid grid-cols-3 w-full">
+                <TabsList className="grid grid-cols-3 gap-2 max-sm:grid-cols-1 w-full max-sm:mb-12">
                     <TabsTrigger
                         value="all"
                         className="data-[state=active]:bg-primary data-[state=active]:text-background"
@@ -64,7 +64,7 @@ const ResourcesPage = async ({ searchParams }) => {
                 </TabsList>
 
                 <TabsContent value="all" className="mt-4">
-                    <div className="flex items-center justify-end">
+                    <div className="flex items-center justify-end max-sm:flex-col max-sm:items-start max-sm:gap-2 max-sm:mb-4">
                         <p className="text-sm text-muted-foreground mr-2">Filter Resources:</p>
                         <ResourceFilterSelect categories={categories} />
                     </div>

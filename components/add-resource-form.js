@@ -39,7 +39,7 @@ const AddResourceForm = ({ categories }) => {
                 <div className="grid gap-2">
                     <Label className={'text-background'} htmlFor="category">Assign Category</Label>
                     <Select value={value} onValueChange={setValue} name="category">
-                        <SelectTrigger className="max-w-2xl w-2xl text-background">
+                        <SelectTrigger className="w-full text-background">
                             <SelectValue placeholder="Select category" />
                         </SelectTrigger>
                         <SelectContent className={'bg-foreground text-background'}>
@@ -64,7 +64,7 @@ const AddResourceForm = ({ categories }) => {
                 <p>OR</p>
                 <div className="grid gap-2">
                     <Label className={'text-background'} htmlFor="resourceLink">Resource Link</Label>
-                    <Input className="max-w-2xl w-2xl text-background" type='url' name='resourceLink' />
+                    <Input className="w-full text-background" type='url' name='resourceLink' />
                 </div>
                 <Button type='submit' disabled={isPending} className={'mt-2'}>Submit</Button>
             </form>

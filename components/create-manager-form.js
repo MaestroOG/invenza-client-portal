@@ -33,10 +33,10 @@ const CreateManagerForm = ({ users }) => {
                 <div className="grid gap-2">
                     <Label htmlFor='user'>Select User</Label>
                     <Select value={value} onValueChange={setValue}>
-                        <SelectTrigger className="w-3xl">
+                        <SelectTrigger className="w-full md:max-w-3xl">
                             <SelectValue placeholder="Select User" />
                         </SelectTrigger>
-                        <SelectContent className={'max-w-3xl'}>
+                        <SelectContent className={'w-full md:max-w-3xl'}>
                             {users?.length === 0 && <p className="text-center p-2">No Users To Assign Roles</p>}
                             {users?.length > 0 && users?.map(user => (
                                 <>
@@ -50,10 +50,10 @@ const CreateManagerForm = ({ users }) => {
                 <div className="grid gap-2">
                     <Label htmlFor='user'>Select Service</Label>
                     <Select value={serviceValue} onValueChange={setServiceValue}>
-                        <SelectTrigger className="w-3xl">
+                        <SelectTrigger className="w-full md:max-w-3xl">
                             <SelectValue placeholder="Select Service" />
                         </SelectTrigger>
-                        <SelectContent className={'max-w-3xl'}>
+                        <SelectContent className={'w-full md:max-w-3xl'}>
                             {yourProjects.map(project => (
                                 <>
                                     <SelectItem key={project.projectTitle} value={project.projectTitle}>{project.projectTitle}</SelectItem>
@@ -63,7 +63,7 @@ const CreateManagerForm = ({ users }) => {
                     </Select>
                     <input type="hidden" name='service' value={serviceValue} />
                 </div>
-                <Button disabled={isPending} type='submit' className={'max-w-3xl'}>Assign Role</Button>
+                <Button disabled={isPending} type='submit' className={'w-full md:max-w-3xl'}>Assign Role</Button>
             </form>
             <Dialog open={open} onOpenChange={setOpen}>
                 <DialogContent>

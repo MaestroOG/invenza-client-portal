@@ -147,10 +147,10 @@ const Header = ({ userFromDB, pfpLink }) => {
             <Link href={'/'} className='md:hidden'><Image src='/logo.png' alt="Invenza logo" width={135} height={37} priority /></Link>
             <div className='flex items-center gap-4'>
                 <div className="flex items-center gap-4">
-                    {userFromDB?.credit > 0 && <div className="flex items-center gap-2 p-2 border border-primary">
+                    {/* {userFromDB?.credit > 0 && <div className="flex items-center gap-2 p-2 border border-primary">
                         <CircleDollarSign className="text-white" />
                         <p className="text-white">AUD {userFromDB?.credit}.00</p>
-                    </div>}
+                    </div>} */}
                     <div className="flex items-center">
                         {loading && <Loader size="h-4 w-4" />}
                         {!loading && !error && countryCode && <Image
@@ -209,23 +209,23 @@ const Header = ({ userFromDB, pfpLink }) => {
                 <div className="flex items-center md:hidden">
                     <Drawer direction="left" >
                         <DrawerTrigger className='md:hidden'><Menu className='text-white' size={23}></Menu></DrawerTrigger>
-                        <DrawerContent className={'bg-dark-blue'}>
+                        <DrawerContent className={'bg-background'}>
                             <DrawerHeader>
                                 <DrawerClose>
                                     <X className='text-white' />
                                 </DrawerClose>
                                 <div className='mt-8'>
-                                    {userFromDB?.role !== 'manager' && <DrawerClose asChild>
+                                    {/* {userFromDB?.role !== 'manager' && <DrawerClose asChild>
                                         <Link href={'/projects/new-project'} className={`bg-white flex items-center gap-2.5 p-2 rounded-full cursor-pointer`}>
                                             <Image src={'/addIcon.png'} width={34} height={34} alt="Add_Icon" />
                                             <p className="font-medium text-sm">Create new project</p>
                                         </Link>
-                                    </DrawerClose>}
+                                    </DrawerClose>} */}
 
                                     <div className="sidebar-menu">
                                         {links.map((link, i) => (
                                             <DrawerClose asChild key={i}>
-                                                <Link href={link.href} className={`${pathname === link.href && 'bg-red'} sidebar-link`}>
+                                                <Link href={link.href} className={`${pathname === link.href && 'bg-primary text-background'} sidebar-link`}>
                                                     <div className="flex items-center gap-2 text-white">
                                                         {link.icon}
                                                         <span className="text-white text-lg font-bold">{link.title}</span>
