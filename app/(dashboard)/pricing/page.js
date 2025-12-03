@@ -6,7 +6,7 @@ const PricingPage = () => {
     return (
         <Container className={'bg-white p-4 mt-6 min-h-[80vh] overflow-hidden md:overflow-auto'}>
             {/* Download Button */}
-            <div className="flex justify-end mb-4">
+            {/* <div className="flex justify-end mb-4">
                 <a
                     href="/stratital-pricelist.pdf"
                     download="Stratital Pricelist"
@@ -25,7 +25,7 @@ const PricingPage = () => {
                         <p className="translate-x-2 text-sm sm:text-base">Download</p>
                     </button>
                 </a>
-            </div>
+            </div> */}
 
             {/* PDF Section */}
             <div className="w-full h-auto md:h-[70vh] overflow-hidden md:overflow-auto rounded-lg border border-gray-200">

@@ -5,8 +5,8 @@ import { useCountry } from "@/hooks/useCountry";
 const PricingPDF = () => {
     const { countryCode, loading, error } = useCountry();
 
-    if (loading) return <p className="text-center p-4">Loading pricing document...</p>;
-    if (error) return <p className="text-center p-4">Unable to load pricing document</p>;
+    // if (loading) return <p className="text-center p-4">Loading pricing document...</p>;
+    // if (error) return <p className="text-center p-4">Unable to load pricing document</p>;
 
     const pdfUrl =
         countryCode?.trim() === "ZA"
@@ -14,12 +14,13 @@ const PricingPDF = () => {
             : "/stratital-pricelist.pdf";
 
     return (
-        <embed
-            src={pdfUrl + "#toolbar=0&navpanes=0&scrollbar=0"}
-            type="application/pdf"
-            className="w-full h-full"
-        />
-    )
+        // <embed
+        //     src={pdfUrl + "#toolbar=0&navpanes=0&scrollbar=0"}
+        //     type="application/pdf"
+        //     className="w-full h-full"
+        // />
+        <p className="text-center p-4">Coming Soon...</p>
+    );
 }
 
 export default PricingPDF

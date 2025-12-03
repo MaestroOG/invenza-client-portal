@@ -9,11 +9,11 @@ export const yourProjects = [
         projectTitle: "National SEO",
         desc: "SEO strategy focused on improving visibility across a country, not tied to a specific city or region."
     },
-    {
-        id: Math.random(),
-        projectTitle: "Link Building",
-        desc: "The process of acquiring high-quality backlinks from reputable websites to boost your site’s authority."
-    },
+    // {
+    //     id: Math.random(),
+    //     projectTitle: "Link Building",
+    //     desc: "The process of acquiring high-quality backlinks from reputable websites to boost your site’s authority."
+    // },
     {
         id: Math.random(),
         projectTitle: "Google Advertising",
@@ -39,14 +39,14 @@ export const yourProjects = [
         projectTitle: "Email Marketing",
         desc: "Email marketing campaigns designed to nurture leads, promote offers, and build long-term customer loyalty."
     },
+    // {
+    //     id: Math.random(),
+    //     projectTitle: "Virtual Assistance Resources",
+    //     desc: "Dedicated remote staff to support administrative tasks, digital marketing, and back-end operations."
+    // },
     {
         id: Math.random(),
-        projectTitle: "Virtual Assistance Resources",
-        desc: "Dedicated remote staff to support administrative tasks, digital marketing, and back-end operations."
-    },
-    {
-        id: Math.random(),
-        projectTitle: "Lead Generation - Cold Calling",
+        projectTitle: "Lead Generation",
         desc: "Outbound calling to generate leads, book appointments, or qualify prospects."
     },
     {
