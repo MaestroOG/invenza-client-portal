@@ -142,7 +142,7 @@ const Header = ({ userFromDB, pfpLink }) => {
 
 
     return (
-        <header className='w-full px-8 py-2 md:py-9 flex bg-background items-center justify-between md:justify-end gap-4 sticky top-0 z-50 border-b border-primary'>
+        <header className='w-full px-8 py-2 md:py-9 flex bg-foreground items-center justify-between md:justify-end gap-4 sticky top-0 z-50 border-b border-primary'>
 
             <Link href={'/'} className='md:hidden'><Image src='/logo.png' alt="Invenza logo" width={135} height={37} priority /></Link>
             <div className='flex items-center gap-4'>
@@ -208,11 +208,11 @@ const Header = ({ userFromDB, pfpLink }) => {
 
                 <div className="flex items-center md:hidden">
                     <Drawer direction="left" >
-                        <DrawerTrigger className='md:hidden'><Menu className='text-white' size={23}></Menu></DrawerTrigger>
-                        <DrawerContent className={'bg-background'}>
+                        <DrawerTrigger className='md:hidden'><Menu className='text-black' size={23}></Menu></DrawerTrigger>
+                        <DrawerContent className={'bg-foreground'}>
                             <DrawerHeader>
                                 <DrawerClose>
-                                    <X className='text-white' />
+                                    <X className='text-black' />
                                 </DrawerClose>
                                 <div className='mt-8'>
                                     {/* {userFromDB?.role !== 'manager' && <DrawerClose asChild>
@@ -225,10 +225,10 @@ const Header = ({ userFromDB, pfpLink }) => {
                                     <div className="sidebar-menu">
                                         {links.map((link, i) => (
                                             <DrawerClose asChild key={i}>
-                                                <Link href={link.href} className={`${pathname === link.href && 'bg-primary text-background'} sidebar-link`}>
-                                                    <div className="flex items-center gap-2 text-white">
+                                                <Link href={link.href} className={`${pathname === link.href && 'bg-primary text-black'} sidebar-link`}>
+                                                    <div className="flex items-center gap-2 text-black">
                                                         {link.icon}
-                                                        <span className="text-white text-lg font-bold">{link.title}</span>
+                                                        <span className="text-black text-lg font-bold">{link.title}</span>
                                                     </div>
                                                 </Link>
                                             </DrawerClose>

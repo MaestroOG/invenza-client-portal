@@ -34,31 +34,31 @@ export const yourProjects = [
         projectTitle: "Web Design and Development",
         desc: "Design and development of professional, responsive websites tailored to your brand and business goals."
     },
-    {
-        id: Math.random(),
-        projectTitle: "Email Marketing",
-        desc: "Email marketing campaigns designed to nurture leads, promote offers, and build long-term customer loyalty."
-    },
+    // {
+    //     id: Math.random(),
+    //     projectTitle: "Email Marketing",
+    //     desc: "Email marketing campaigns designed to nurture leads, promote offers, and build long-term customer loyalty."
+    // },
     // {
     //     id: Math.random(),
     //     projectTitle: "Virtual Assistance Resources",
     //     desc: "Dedicated remote staff to support administrative tasks, digital marketing, and back-end operations."
     // },
-    {
-        id: Math.random(),
-        projectTitle: "Lead Generation",
-        desc: "Outbound calling to generate leads, book appointments, or qualify prospects."
-    },
-    {
-        id: Math.random(),
-        projectTitle: "Managed Web Support",
-        desc: "Ongoing website maintenance and technical support to ensure your site remains updated, secure, and high-performing."
-    },
-    {
-        id: Math.random(),
-        projectTitle: "Adhoc Support",
-        desc: "On-demand technical assistance and troubleshooting for specific website issues or updates as needed."
-    }
+    // {
+    //     id: Math.random(),
+    //     projectTitle: "Lead Generation",
+    //     desc: "Outbound calling to generate leads, book appointments, or qualify prospects."
+    // },
+    // {
+    //     id: Math.random(),
+    //     projectTitle: "Managed Web Support",
+    //     desc: "Ongoing website maintenance and technical support to ensure your site remains updated, secure, and high-performing."
+    // },
+    // {
+    //     id: Math.random(),
+    //     projectTitle: "Adhoc Support",
+    //     desc: "On-demand technical assistance and troubleshooting for specific website issues or updates as needed."
+    // }
 ];
 
 export const faqs = {

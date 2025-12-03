@@ -36,7 +36,7 @@ export default async function RootLayout({ children }) {
         </Script> */}
       </head>
       <body
-        className={`antialiased flex`}
+        className={`antialiased flex bg-foreground`}
       >
         <NextTopLoader
           color="#F9FE02"

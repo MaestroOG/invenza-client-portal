@@ -102,8 +102,8 @@ const Sidebar = () => {
 
 
     return (
-        <aside className="hidden md:flex w-[85px] md:w-3xs min-h-screen md:h-screen fixed inset-y-0 left-0 flex-col items-center p-5">
-            <Link href={'/'} className="relative w-60 h-32 mb-8 hidden md:flex">
+        <aside className="hidden bg-foreground md:flex w-[85px] md:w-3xs min-h-screen md:h-screen fixed inset-y-0 left-0 flex-col items-center p-5">
+            <Link href={'/'} className="relative w-56 h-28 mb-8 hidden md:flex">
                 <Image
                     src="/logo.png"
                     alt="Invenza"
@@ -120,7 +120,7 @@ const Sidebar = () => {
                         pathname === link.href || pathname.startsWith(link.href + "/")
                     return (
                         <Link key={i} href={link.href} className={`${isActive ? "bg-secondary text-black" : ""} sidebar-link`}>
-                            <div className="flex items-center gap-2">
+                            <div className="flex items-center gap-2 text-black">
                                 {link.icon}
                                 <span className="text-lg font-bold hidden md:block">{link.title}</span>
                             </div>
