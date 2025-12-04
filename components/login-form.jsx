@@ -31,19 +31,19 @@ export function LoginForm({
     <>
       <form action={formAction} className={cn("flex flex-col gap-6", className)} {...props}>
         <div className="flex flex-col items-center gap-2 text-center">
-          <h1 className="text-foreground text-2xl font-bold">Login to your account</h1>
-          <p className="text-muted-foreground text-sm text-balance">
+          <h1 className="text-background text-2xl font-bold">Login to your account</h1>
+          <p className="text-muted-background text-sm text-balance">
             Enter your email below to login to your account
           </p>
         </div>
         <div className="grid gap-6">
           <div className="grid gap-3">
-            <Label htmlFor="email" className={'text-foreground'}>Email</Label>
-            <Input id="email" type="email" name="email" placeholder="Enter your email" required className={'border border-gray-300 text-foreground'} />
+            <Label htmlFor="email" className={'text-background'}>Email</Label>
+            <Input id="email" type="email" name="email" placeholder="Enter your email" required className={'border border-gray-300 text-background'} />
           </div>
           <div className="grid gap-3">
             <div className="flex items-center">
-              <Label htmlFor="password" className={'text-foreground'}>Password</Label>
+              <Label htmlFor="password" className={'text-background'}>Password</Label>
               <Link href="/forgot-password" className="ml-auto text-sm underline-offset-4 hover:underline">
                 Forgot your password?
               </Link>
@@ -51,14 +51,14 @@ export function LoginForm({
             <div className="relative">
               <Input
                 id={id}
-                className="pe-9 text-foreground"
+                className="pe-9 text-background"
                 placeholder="Password"
                 name="password"
                 type={isVisible ? "text" : "password"}
                 required
               />
               <button
-                className="absolute inset-y-0 end-0 flex h-full w-9 items-center justify-center rounded-e-md text-muted-foreground/80 transition-[color,box-shadow] outline-none hover:text-foreground focus:z-10 focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
+                className="absolute inset-y-0 end-0 flex h-full w-9 items-center justify-center rounded-e-md text-muted-foreground/80 transition-[color,box-shadow] outline-none hover:text-background focus:z-10 focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
                 type="button"
                 onClick={toggleVisibility}
                 aria-label={isVisible ? "Hide password" : "Show password"}
@@ -80,7 +80,7 @@ export function LoginForm({
           </Button>
         </div>
         {message?.err && <div className="text-center text-red font-bold text-xl">{message?.err}</div>}
-        <div className="text-center text-sm">
+        <div className="text-center text-sm text-background">
           Don&apos;t have an account?{" "}
           <br />
           <Link href="/signup" className="underline underline-offset-4">

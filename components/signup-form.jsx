@@ -82,8 +82,8 @@ export function SignUpForm({
         <>
             <form action={formAction} className={cn("flex flex-col gap-6", className)} {...props}>
                 <div className="flex flex-col items-center gap-2 text-center">
-                    <h1 className="text-2xl font-bold text-foreground">Become A Partner</h1>
-                    <p className="text-muted-foreground text-sm text-balance">
+                    <h1 className="text-2xl font-bold text-background">Become A Partner</h1>
+                    <p className="text-muted-background text-sm text-balance">
                         Enter your information below to become a partner
                     </p>
                 </div>
@@ -99,51 +99,51 @@ export function SignUpForm({
 
                             <div className="grid gap-3">
                                 <div className="flex items-center gap-1">
-                                    <Label htmlFor="email" className={'text-foreground'}>Email</Label>
+                                    <Label htmlFor="email" className={'text-background'}>Email</Label>
                                     <span className="text-red">*</span>
                                 </div>
-                                <Input id="email" type="email" name="email" value={formValues.email} onChange={handleChange} required className={'border border-gray-300 text-foreground'} />
+                                <Input id="email" type="email" name="email" value={formValues.email} onChange={handleChange} required className={'border border-gray-300 text-background'} />
                             </div>
                             <div className="grid gap-3">
                                 <div className="flex items-center gap-1">
-                                    <Label htmlFor="password" className={'text-foreground'}>Password</Label>
+                                    <Label htmlFor="password" className={'text-background'}>Password</Label>
                                     <span className="text-red">*</span>
                                 </div>
-                                <Input id="password" name="password" type="password" value={formValues.password} onChange={handleChange} required className={'border border-gray-300 text-foreground'} />
+                                <Input id="password" name="password" type="password" value={formValues.password} onChange={handleChange} required className={'border border-gray-300 text-background'} />
                             </div>
 
                             {/* Contact Information */}
 
                             <div className="grid gap-3">
                                 <div className="flex items-center gap-1">
-                                    <Label htmlFor="name" className={'text-foreground'}>Primary Contact Name</Label>
+                                    <Label htmlFor="name" className={'text-background'}>Primary Contact Name</Label>
                                     <span className="text-red">*</span>
                                 </div>
-                                <Input id="name" type="text" name="name" value={formValues.name} onChange={handleChange} required className={'border border-gray-300 text-foreground'} />
+                                <Input id="name" type="text" name="name" value={formValues.name} onChange={handleChange} required className={'border border-gray-300 text-background'} />
                             </div>
 
                             <div className="grid gap-3">
                                 <div className="flex items-center gap-1">
-                                    <Label htmlFor="position" className={'text-foreground'}>Position/Title</Label>
+                                    <Label htmlFor="position" className={'text-background'}>Position/Title</Label>
                                     <span className="text-red">*</span>
                                 </div>
-                                <Input id="position" type="text" name="position" value={formValues.position} onChange={handleChange} required className={'border border-gray-300 text-foreground'} />
+                                <Input id="position" type="text" name="position" value={formValues.position} onChange={handleChange} required className={'border border-gray-300 text-background'} />
                             </div>
 
                             <div className="grid gap-3">
                                 <div className="flex items-center gap-1">
-                                    <Label htmlFor="phoneNum" className={'text-foreground'}>Phone Number</Label>
+                                    <Label htmlFor="phoneNum" className={'text-background'}>Phone Number</Label>
                                     <span className="text-red">*</span>
                                 </div>
-                                <Input id="phoneNum" type="text" value={formValues.phoneNum} onChange={handleChange} name="phoneNum" required className={'border border-gray-300 text-foreground'} />
+                                <Input id="phoneNum" type="text" value={formValues.phoneNum} onChange={handleChange} name="phoneNum" required className={'border border-gray-300 text-background'} />
                             </div>
 
                             <div className="grid gap-3">
                                 <div className="flex items-center gap-1">
-                                    <Label htmlFor="contactEmail" className={'text-foreground'}>Accounts Contact Email</Label>
+                                    <Label htmlFor="contactEmail" className={'text-background'}>Accounts Contact Email</Label>
                                     <span className="text-red">*</span>
                                 </div>
-                                <Input id="contactEmail" type="email" value={formValues.contactEmail} onChange={handleChange} name="contactEmail" required className={'border border-gray-300 text-foreground'} />
+                                <Input id="contactEmail" type="email" value={formValues.contactEmail} onChange={handleChange} name="contactEmail" required className={'border border-gray-300 text-background'} />
                             </div>
                         </>
                     )}
@@ -154,60 +154,60 @@ export function SignUpForm({
 
                             <div className="grid gap-3">
                                 <div className="flex items-center gap-1">
-                                    <Label htmlFor="companyName" className={'text-foreground'}>Company Name</Label>
+                                    <Label htmlFor="companyName" className={'text-background'}>Company Name</Label>
                                     <span className="text-red">*</span>
                                 </div>
-                                <Input id="companyName" type="text" value={formValues.companyName} onChange={handleChange} name="companyName" className={'border border-gray-300 text-foreground'} required />
+                                <Input id="companyName" type="text" value={formValues.companyName} onChange={handleChange} name="companyName" className={'border border-gray-300 text-background'} required />
                             </div>
 
                             <div className="grid gap-3">
                                 <div className="flex items-center gap-1">
-                                    <Label htmlFor="abn" className={'text-foreground'}>ABN (Australian Business Number)</Label>
+                                    <Label htmlFor="abn" className={'text-background'}>ABN (Australian Business Number)</Label>
                                     {/* <span className="text-red">*</span> */}
                                 </div>
-                                <Input id="abn" type="number" value={formValues.abn} onChange={handleChange} name="abn" className={'border border-gray-300 text-foreground'} />
+                                <Input id="abn" type="number" value={formValues.abn} onChange={handleChange} name="abn" className={'border border-gray-300 text-background'} />
                             </div>
 
                             <div className="grid gap-3">
                                 <div className="flex items-center gap-1">
-                                    <Label htmlFor="companyWebsite" className={'text-foreground'}>Company Website (Add https:// in front of the URL)</Label>
+                                    <Label htmlFor="companyWebsite" className={'text-background'}>Company Website (Add https:// in front of the URL)</Label>
                                     <span className="text-red">*</span>
                                 </div>
-                                <Input id="companyWebsite" value={formValues.companyWebsite} onChange={handleChange} type="url" name="companyWebsite" required className={'border border-gray-300 text-foreground'} />
+                                <Input id="companyWebsite" value={formValues.companyWebsite} onChange={handleChange} type="url" name="companyWebsite" required className={'border border-gray-300 text-background'} />
                             </div>
 
                             <div className="grid gap-3">
                                 <div className="flex items-center gap-1">
-                                    <Label htmlFor="businessAddress" className={'text-foreground'}>Business Address</Label>
+                                    <Label htmlFor="businessAddress" className={'text-background'}>Business Address</Label>
                                     <span className="text-red">*</span>
                                 </div>
-                                <Input id="businessAddress" type="text" value={formValues.businessAddress} onChange={handleChange} name="businessAddress" required className={'border border-gray-300 text-foreground'} />
+                                <Input id="businessAddress" type="text" value={formValues.businessAddress} onChange={handleChange} name="businessAddress" required className={'border border-gray-300 text-background'} />
                             </div>
 
                             <div className="grid gap-3">
                                 <div className="flex items-center gap-1">
-                                    <Label htmlFor="yearsInBiz" className={'text-foreground'}>Years in Business</Label>
+                                    <Label htmlFor="yearsInBiz" className={'text-background'}>Years in Business</Label>
                                     <span className="text-red">*</span>
                                 </div>
-                                <Input id="yearsInBiz" type="number" value={formValues.yearsInBiz} onChange={handleChange} name="yearsInBiz" required className={'border border-gray-300 text-foreground'} />
+                                <Input id="yearsInBiz" type="number" value={formValues.yearsInBiz} onChange={handleChange} name="yearsInBiz" required className={'border border-gray-300 text-background'} />
                             </div>
 
                             {/* <div className="grid gap-3">
                                 <div className="flex items-center gap-1">
-                                    <Label htmlFor="numOfActiveClients" className={'text-foreground'}>Approximate number of active clients</Label>
+                                    <Label htmlFor="numOfActiveClients" className={'text-background'}>Approximate number of active clients</Label>
                                     <span className="text-red">*</span>
                                 </div>
-                                <Input id="numOfActiveClients" type="number" value={formValues.numOfActiveClients} onChange={handleChange} name="numOfActiveClients" required className={'border border-gray-300 text-foreground'} />
+                                <Input id="numOfActiveClients" type="number" value={formValues.numOfActiveClients} onChange={handleChange} name="numOfActiveClients" required className={'border border-gray-300 text-background'} />
                             </div> */}
 
                             <div className="grid gap-3">
-                                <Label htmlFor="socialMediaLinks" className={'text-foreground'}>Social Media Links (if applicable)</Label>
-                                <Textarea id="socialMediaLinks" value={formValues.socialMediaLinks} onChange={handleChange} name="socialMediaLinks" className={'border border-gray-300 text-foreground'} />
+                                <Label htmlFor="socialMediaLinks" className={'text-background'}>Social Media Links (if applicable)</Label>
+                                <Textarea id="socialMediaLinks" value={formValues.socialMediaLinks} onChange={handleChange} name="socialMediaLinks" className={'border border-gray-300 text-background'} />
                             </div>
 
                             {/* <div className="grid gap-3">
                                 <div className="flex items-center gap-1">
-                                    <Label className={'text-foreground'}>Company Structure</Label>
+                                    <Label className={'text-background'}>Company Structure</Label>
                                     <span className="text-red">*</span>
                                 </div>
                                 <RadioGroup name="companyStructure" value={formValues.companyStructure} onValueChange={(value) => setFormValues(prev => ({
@@ -216,19 +216,19 @@ export function SignUpForm({
                                 }))}>
                                     <div className="flex items-center space-x-2">
                                         <RadioGroupItem value="sole-trader" id="sole-trader" />
-                                        <Label className={'font-normal text-foreground'} htmlFor="sole-trader">Sole Trader</Label>
+                                        <Label className={'font-normal text-background'} htmlFor="sole-trader">Sole Trader</Label>
                                     </div>
                                     <div className="flex items-center space-x-2">
                                         <RadioGroupItem value="partner-ship" id="partner-ship" />
-                                        <Label className={'font-normal text-foreground'} htmlFor="partner-ship">Partnership</Label>
+                                        <Label className={'font-normal text-background'} htmlFor="partner-ship">Partnership</Label>
                                     </div>
                                     <div className="flex items-center space-x-2">
                                         <RadioGroupItem value="pty-ltd" id="pty-ltd" />
-                                        <Label className={'font-normal text-foreground'} htmlFor="pty-ltd">Pty Ltd.</Label>
+                                        <Label className={'font-normal text-background'} htmlFor="pty-ltd">Pty Ltd.</Label>
                                     </div>
                                     <div className="flex items-center space-x-2">
                                         <RadioGroupItem value="other" id="other" />
-                                        <Label className={'font-normal text-foreground'} htmlFor="other">Other</Label>
+                                        <Label className={'font-normal text-background'} htmlFor="other">Other</Label>
                                     </div>
                                 </RadioGroup>
                             </div> */}
@@ -242,78 +242,78 @@ export function SignUpForm({
 
                             <div className="grid gap-3">
                                 <div className="flex items-center gap-1">
-                                    <Label htmlFor="primaryServices" className={'text-foreground'}>Primary Services Your Company Offers</Label>
+                                    <Label htmlFor="primaryServices" className={'text-background'}>Primary Services Your Company Offers</Label>
                                     <span className="text-red">*</span>
                                 </div>
-                                <Textarea id="primaryServices" value={formValues.primaryServices} onChange={handleChange} name="primaryServices" required className={'border border-gray-300 text-foreground'} />
+                                <Textarea id="primaryServices" value={formValues.primaryServices} onChange={handleChange} name="primaryServices" required className={'border border-gray-300 text-background'} />
                             </div>
 
                             <div className="grid gap-3">
                                 <div className="flex items-center gap-1">
-                                    <Label htmlFor="industriesWorkWith" className={'text-foreground'}>Industries You Commonly Work With</Label>
+                                    <Label htmlFor="industriesWorkWith" className={'text-background'}>Industries You Commonly Work With</Label>
                                     <span className="text-red">*</span>
                                 </div>
-                                <Textarea id="industriesWorkWith" value={formValues.industriesWorkWith} onChange={handleChange} name="industriesWorkWith" required className={'border border-gray-300 text-foreground'} />
+                                <Textarea id="industriesWorkWith" value={formValues.industriesWorkWith} onChange={handleChange} name="industriesWorkWith" required className={'border border-gray-300 text-background'} />
                             </div>
 
                             <div className="grid gap-3">
                                 <div className="flex items-center gap-1">
-                                    <Label htmlFor="regionsServe" className={'text-foreground'}>Regions You Serve</Label>
+                                    <Label htmlFor="regionsServe" className={'text-background'}>Regions You Serve</Label>
                                     <span className="text-red">*</span>
                                 </div>
-                                <Textarea id="regionsServe" value={formValues.regionsServe} onChange={handleChange} name="regionsServe" required className={'border border-gray-300 text-foreground'} />
+                                <Textarea id="regionsServe" value={formValues.regionsServe} onChange={handleChange} name="regionsServe" required className={'border border-gray-300 text-background'} />
                             </div>
 
                             <div className="grid gap-3">
-                                <Label className={'text-foreground'}>Typical Service Model</Label>
+                                <Label className={'text-background'}>Typical Service Model</Label>
                                 <RadioGroup name="serviceModel" value={formValues.serviceModel} onValueChange={(value) => setFormValues(prev => ({
                                     ...prev,
                                     serviceModel: value
                                 }))}>
                                     <div className="flex items-center space-x-2">
                                         <RadioGroupItem value="retainer-based" id="retainer-based" />
-                                        <Label className={'font-normal text-foreground'} htmlFor="retainer-based">Retainer Based</Label>
+                                        <Label className={'font-normal text-background'} htmlFor="retainer-based">Retainer Based</Label>
                                     </div>
                                     <div className="flex items-center space-x-2">
                                         <RadioGroupItem value="project-based" id="project-based" />
-                                        <Label className={'font-normal text-foreground'} htmlFor="project-based">Project Based</Label>
+                                        <Label className={'font-normal text-background'} htmlFor="project-based">Project Based</Label>
                                     </div>
                                     <div className="flex items-center space-x-2">
                                         <RadioGroupItem value="project-based" id="project-based" />
-                                        <Label className={'font-normal text-foreground'} htmlFor="product-based">Product Based</Label>
+                                        <Label className={'font-normal text-background'} htmlFor="product-based">Product Based</Label>
                                     </div>
                                     <div className="flex items-center space-x-2">
                                         <RadioGroupItem value="all" id="all" />
-                                        <Label className={'font-normal text-foreground'} htmlFor="all">All</Label>
+                                        <Label className={'font-normal text-background'} htmlFor="all">All</Label>
                                     </div>
                                 </RadioGroup>
                             </div>
 
                             {/* <div className="grid gap-3">
-                                <Label htmlFor="monthlyProjectVolume" className={'text-foreground'}>Anticipated Monthly Project Volume for Invenza (Optional)</Label>
-                                <Input id="monthlyProjectVolume" value={formValues.monthlyProjectVolume} onChange={handleChange} type="text" name="monthlyProjectVolume" className={'border border-gray-300 text-foreground'} />
+                                <Label htmlFor="monthlyProjectVolume" className={'text-background'}>Anticipated Monthly Project Volume for Invenza (Optional)</Label>
+                                <Input id="monthlyProjectVolume" value={formValues.monthlyProjectVolume} onChange={handleChange} type="text" name="monthlyProjectVolume" className={'border border-gray-300 text-background'} />
                             </div> */}
 
                             <div className="grid gap-3">
-                                <Label className={'text-foreground'}>Do you currently use any other marketing agency?</Label>
+                                <Label className={'text-background'}>Do you currently use any other marketing agency?</Label>
                                 <RadioGroup name="isUsingWhiteLabelProvider" value={formValues.isUsingWhiteLabelProvider} onValueChange={(value) => setFormValues(prev => ({
                                     ...prev,
                                     isUsingWhiteLabelProvider: value
                                 }))}>
                                     <div className="flex items-center space-x-2">
                                         <RadioGroupItem value="yes" id="yes" />
-                                        <Label className={'font-normal text-foreground'} htmlFor="yes">Yes</Label>
+                                        <Label className={'font-normal text-background'} htmlFor="yes">Yes</Label>
                                     </div>
                                     <div className="flex items-center space-x-2">
                                         <RadioGroupItem value="no" id="no" />
-                                        <Label className={'font-normal text-foreground'} htmlFor="no">No</Label>
+                                        <Label className={'font-normal text-background'} htmlFor="no">No</Label>
                                     </div>
                                 </RadioGroup>
                             </div>
 
                             <div className="grid gap-3">
-                                <Label htmlFor="challengeDetail" className={'text-foreground'}>If yes, what challenges have you faced?</Label>
-                                <Textarea id="challengeDetail" value={formValues.challengeDetail} onChange={handleChange} name="challengeDetail" required={formValues.isUsingWhiteLabelProvider === 'yes' ? true : false} className={'border border-gray-300 text-foreground'} />
+                                <Label htmlFor="challengeDetail" className={'text-background'}>If yes, what challenges have you faced?</Label>
+                                <Textarea id="challengeDetail" value={formValues.challengeDetail} onChange={handleChange} name="challengeDetail" required={formValues.isUsingWhiteLabelProvider === 'yes' ? true : false} className={'border border-gray-300 text-background'} />
                             </div>
                         </>
                     )}
@@ -361,7 +361,7 @@ export function SignUpForm({
                         </Dialog>
                     </div>
                     {message?.err && <div className="text-center text-red font-bold text-xl">{message?.err}</div>}
-                    <div className="text-center text-sm">
+                    <div className="text-center text-sm text-background">
                         Already a user?{" "}
                         <Link href="/login" className="underline underline-offset-4">
                             Log In
