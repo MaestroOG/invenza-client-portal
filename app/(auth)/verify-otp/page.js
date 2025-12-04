@@ -16,13 +16,8 @@ export const metadata = {
 const VerifyOtpPage = async () => {
 
     const userInfo = await getOTPUSerInfo();
-    console.log(userInfo)
-
-    // if (!userInfo) {
-    //     notFound();
-    // }
     return (
-        <main className="h-screen w-full flex items-center justify-center">
+        <main className="h-screen w-full flex items-center justify-center bg-foreground">
             <Card className={'max-w-3xl w-3xl'}>
                 <CardHeader>
                     <CardTitle>Verify OTP</CardTitle>
