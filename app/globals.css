@@ -30,7 +30,7 @@ aside::after {
   top: 15.4%;
   height: 90%;
   width: 1px;
-  background-color: oklch(0.9611 0.2114 111.2239);
+  background-color: #000000;
   /* or use Tailwind's color */
 }
 
@@ -59,7 +59,7 @@ aside::after {
 
   .sidebar-link::after {
     content: '';
-    @apply absolute left-0 bottom-0 h-[2px] bg-primary;
+    @apply absolute left-0 bottom-0 h-[2px] bg-background;
     width: 100%;
     transform: scaleX(0);
     transform-origin: left;
