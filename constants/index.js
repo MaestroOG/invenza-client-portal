@@ -291,11 +291,11 @@ export const audits = [
         projectTitle: "National SEO Audit",
         desc: "Evaluation of website performance for national search, including keyword strategy, backlink profile, site structure, and content optimization."
     },
-    {
-        id: Math.random(),
-        projectTitle: "Link Building Audit",
-        desc: "Assessment of your website’s backlink profile to identify toxic links, growth opportunities, and link quality improvements."
-    },
+    // {
+    //     id: Math.random(),
+    //     projectTitle: "Link Building Audit",
+    //     desc: "Assessment of your website’s backlink profile to identify toxic links, growth opportunities, and link quality improvements."
+    // },
     {
         id: Math.random(),
         projectTitle: "Google Advertising Audit",
@@ -316,29 +316,29 @@ export const audits = [
         projectTitle: "Web Design and Development Audit",
         desc: "Full website review covering UX/UI, responsiveness, page speed, accessibility, SEO best practices, and technical health."
     },
-    {
-        id: Math.random(),
-        projectTitle: "Email Marketing Audit",
-        desc: "Assessment of email campaigns, template design, deliverability, segmentation, open rates, click-through rates, and conversion performance."
-    },
-    {
-        id: Math.random(),
-        projectTitle: "Virtual Assistance Resources Audit",
-        desc: "Evaluation of virtual assistant workflows, efficiency, task management, communication, and alignment with business goals."
-    },
-    {
-        id: Math.random(),
-        projectTitle: "Lead Generation - Cold Calling Audit",
-        desc: "Review of cold calling scripts, call metrics, lead quality, conversion rates, and overall process effectiveness."
-    },
-    {
-        id: Math.random(),
-        projectTitle: "Managed Web Support Audit",
-        desc: "Analysis of website maintenance practices, uptime monitoring, security, backups, and technical support efficiency."
-    },
-    {
-        id: Math.random(),
-        projectTitle: "Adhoc Support Audit",
-        desc: "Evaluation of on-demand technical support tasks, response times, resolution quality, and recurring issue identification."
-    }
+    // {
+    //     id: Math.random(),
+    //     projectTitle: "Email Marketing Audit",
+    //     desc: "Assessment of email campaigns, template design, deliverability, segmentation, open rates, click-through rates, and conversion performance."
+    // },
+    // {
+    //     id: Math.random(),
+    //     projectTitle: "Virtual Assistance Resources Audit",
+    //     desc: "Evaluation of virtual assistant workflows, efficiency, task management, communication, and alignment with business goals."
+    // },
+    // {
+    //     id: Math.random(),
+    //     projectTitle: "Lead Generation - Cold Calling Audit",
+    //     desc: "Review of cold calling scripts, call metrics, lead quality, conversion rates, and overall process effectiveness."
+    // },
+    // {
+    //     id: Math.random(),
+    //     projectTitle: "Managed Web Support Audit",
+    //     desc: "Analysis of website maintenance practices, uptime monitoring, security, backups, and technical support efficiency."
+    // },
+    // {
+    //     id: Math.random(),
+    //     projectTitle: "Adhoc Support Audit",
+    //     desc: "Evaluation of on-demand technical support tasks, response times, resolution quality, and recurring issue identification."
+    // }
 ];
