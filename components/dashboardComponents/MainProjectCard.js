@@ -6,12 +6,12 @@ import { Badge } from "../ui/badge"
 
 const MainProjectCard = ({ project }) => {
     return (
-        <Card className="flex flex-col justify-between max-w-sm border-gray-200 shadow-sm dark:bg-gray-800 dark:border-gray-700">
+        <Card className="flex flex-col justify-between max-w-sm border-gray-200 shadow-sm">
             <CardHeader>
                 <Badge variant="secondary" className="mb-2 w-fit">
                     {camelToNormal(project?.service)}
                 </Badge>
-                <CardTitle className="text-2xl font-bold text-gray-900 dark:text-white">
+                <CardTitle className="text-2xl font-bold">
                     {project?.projectTitle}
                 </CardTitle>
                 <CardDescription className="font-medium">

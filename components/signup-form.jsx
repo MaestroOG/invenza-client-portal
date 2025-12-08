@@ -279,7 +279,7 @@ export function SignUpForm({
                                         <Label className={'font-normal text-background'} htmlFor="project-based">Project Based</Label>
                                     </div>
                                     <div className="flex items-center space-x-2">
-                                        <RadioGroupItem value="project-based" id="project-based" />
+                                        <RadioGroupItem value="product-based" id="product-based" />
                                         <Label className={'font-normal text-background'} htmlFor="product-based">Product Based</Label>
                                     </div>
                                     <div className="flex items-center space-x-2">
