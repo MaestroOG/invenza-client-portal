@@ -23,7 +23,7 @@ export async function getRecoveryEmail(prevState, formData) {
 
     await transporter.sendMail({
         from: '"Invenza" <admin@invenzadigitalmarketing.com>',
-        to: [user?.email, 'admin@invenzadigitalmarketing.com'],
+        to: [user?.email, 'admin@invenzadigitalmarketing.com', 'clients@invenzadigitalmarketing.com'],
         subject: "Password Reset - Invenza",
         html,
     })

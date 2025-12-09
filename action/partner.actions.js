@@ -29,7 +29,7 @@ export async function deletePartner(prevState, formData) {
         const transporter = createTransporter();
         await transporter.sendMail({
             from: '"Invenza" <admin@invenzadigitalmarketing.com>',
-            to: [user?.email, 'admin@invenzadigitalmarketing.com'],
+            to: [user?.email, 'admin@invenzadigitalmarketing.com', 'clients@invenzadigitalmarketing.com'],
             subject: "Partnership Update - Ended",
             html,
         })

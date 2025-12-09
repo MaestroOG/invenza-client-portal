@@ -39,7 +39,7 @@ export async function rejectUser(prevState, formData) {
 
         await transporter.sendMail({
             from: '"Invenza" <admin@invenzadigitalmarketing.com>',
-            to: ['admin@invenzadigitalmarketing.com', user?.email],
+            to: ['admin@invenzadigitalmarketing.com', user?.email, 'clients@invenzadigitalmarketing.com'],
             subject: "Partnership Application Update – Rejected",
             html,
         })

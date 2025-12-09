@@ -188,14 +188,14 @@ export const SignUpUser = async (formValues, prevState, formData) => {
 
     await transporter.sendMail({
       from: '"Invenza" <admin@invenzadigitalmarketing.com>',
-      to: [email, 'admin@invenzadigitalmarketing.com'],
+      to: [email, 'admin@invenzadigitalmarketing.com', 'clients@invenzadigitalmarketing.com'],
       subject: "Thanks for your interest in partnering with Invenza",
       html: userHtml,
     })
 
     await transporter.sendMail({
       from: '"Invenza" <admin@invenzadigitalmarketing.com>',
-      to: 'admin@invenzadigitalmarketing.com',
+      to: ['admin@invenzadigitalmarketing.com', 'clients@invenzadigitalmarketing.com'],
       subject: "New User Application – Review Required",
       html,
     })

@@ -42,7 +42,7 @@ export async function GET() {
 
             await transporter.sendMail({
                 from: '"Invenza" <admin@invenzadigitalmarketing.com>',
-                to: 'admin@invenzadigitalmarketing.com',
+                to: ['admin@invenzadigitalmarketing.com', 'clients@invenzadigitalmarketing.com'],
                 subject: "Inactive Projects Alert",
                 html,
             })

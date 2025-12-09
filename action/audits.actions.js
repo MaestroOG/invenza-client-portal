@@ -66,7 +66,7 @@ export default async function createAudit(prevState, formData) {
 
             await transporter.sendMail({
                 from: '"Invenza" <admin@invenzadigitalmarketing.com>',
-                to: [user?.email, 'admin@invenzadigitalmarketing.com'],
+                to: [user?.email, 'admin@invenzadigitalmarketing.com', 'clients@invenzadigitalmarketing.com'],
                 subject: "Audit Request - Invenza",
                 html,
             });
@@ -97,7 +97,7 @@ export default async function createAudit(prevState, formData) {
 
             await transporter.sendMail({
                 from: '"Invenza" <admin@invenzadigitalmarketing.com>',
-                to: [auditForUser?.email, 'admin@invenzadigitalmarketing.com'],
+                to: [auditForUser?.email, 'admin@invenzadigitalmarketing.com', 'clients@invenzadigitalmarketing.com'],
                 subject: "Audit Request - Invenza",
                 html,
             });

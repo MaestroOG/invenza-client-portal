@@ -85,7 +85,7 @@ export async function createProject(prevState, formData) {
 
             await transporter.sendMail({
                 from: '"Invenza" <admin@invenzadigitalmarketing.com>',
-                to: [projectForUser?.email, 'admin@invenzadigitalmarketing.com'],
+                to: [projectForUser?.email, 'admin@invenzadigitalmarketing.com', 'clients@invenzadigitalmarketing.com'],
                 subject: "Project Created - Invenza",
                 html,
             })
@@ -135,7 +135,7 @@ export async function createProject(prevState, formData) {
 
             await transporter.sendMail({
                 from: '"Invenza" <admin@invenzadigitalmarketing.com>',
-                to: [user?.email, 'admin@invenzadigitalmarketing.com'],
+                to: [user?.email, 'admin@invenzadigitalmarketing.com', 'clients@invenzadigitalmarketing.com'],
                 subject: "Project Created - Invenza",
                 html,
             })
@@ -177,7 +177,7 @@ export async function addNote(id, prevState, formData) {
         if (user?.role === 'user') {
             await transporter.sendMail({
                 from: '"Invenza" <admin@invenzadigitalmarketing.com>',
-                to: 'admin@invenzadigitalmarketing.com',
+                to: ['admin@invenzadigitalmarketing.com', 'clients@invenzadigitalmarketing.com'],
                 subject: "Note Created - Invenza",
                 html,
             })
@@ -188,7 +188,7 @@ export async function addNote(id, prevState, formData) {
             const adminToUserHtml = generateAdminToUserEmailNoteTemplate(project?.projectTitle, project?.createdBy?.name, date, 'https://portal.invenza.com');
             await transporter.sendMail({
                 from: '"Invenza" <admin@invenzadigitalmarketing.com>',
-                to: [project?.createdBy.email, 'admin@invenzadigitalmarketing.com'],
+                to: [project?.createdBy.email, 'admin@invenzadigitalmarketing.com', 'clients@invenzadigitalmarketing.com'],
                 subject: "Note Created - Invenza",
                 html: adminToUserHtml,
             })
@@ -222,7 +222,7 @@ export async function ApproveProject(projectId, prevState, formData) {
 
     await transporter.sendMail({
         from: '"Invenza" <admin@invenzadigitalmarketing.com>',
-        to: [project?.createdBy.email, 'admin@invenzadigitalmarketing.com'],
+        to: [project?.createdBy.email, 'admin@invenzadigitalmarketing.com', 'clients@invenzadigitalmarketing.com'],
         subject: "Project Status Update - Invenza",
         html,
     })
@@ -262,7 +262,7 @@ export async function RejectProject(projectId, prevState, formData) {
 
         await transporter.sendMail({
             from: '"Invenza" <admin@invenzadigitalmarketing.com>',
-            to: [user?.email, 'admin@invenzadigitalmarketing.com'],
+            to: [user?.email, 'admin@invenzadigitalmarketing.com', 'clients@invenzadigitalmarketing.com'],
             subject: "Project Status Update - Invenza",
             html,
         })
@@ -296,7 +296,7 @@ export async function changeProjectStatus(projectId, prevState, formData) {
 
     await transporter.sendMail({
         from: '"Invenza" <admin@invenzadigitalmarketing.com>',
-        to: ["admin@invenzadigitalmarketing.com", user?.email],
+        to: ["admin@invenzadigitalmarketing.com", user?.email, 'clients@invenzadigitalmarketing.com'],
         subject: "Project Status Update - Invenza",
         html,
     })
