@@ -115,6 +115,10 @@ const UserSchema = new Schema({
     credit: {
         type: Number,
         default: 250
+    },
+    isAgency: {
+        type: Boolean,
+        default: true
     }
 }, { timestamps: true })
 

@@ -212,6 +212,113 @@ export const SignUpUser = async (formValues, prevState, formData) => {
 
 }
 
+export const createClientUser = async (formValues, prevState, formData) => {
+  const { email,
+    password,
+    name,
+    position,
+    phoneNum,
+    contactEmail,
+    companyName,
+    abn,
+    companyWebsite,
+    businessAddress,
+    yearsInBiz,
+    numOfActiveClients,
+    socialMediaLinks,
+    companyStructure,
+    primaryServices,
+    industriesWorkWith,
+    regionsServe,
+    serviceModel,
+    monthlyProjectVolume,
+    isUsingWhiteLabelProvider,
+    challengeDetail } = formValues;
+
+
+  // Validations
+
+  if (!isValidEmail(email) || password.length < 6 || !name) {
+    return {
+      err: "Please fill the form correctly."
+    }
+  }
+
+
+  // Password Hashing
+
+  const hashedPassword = await hashPassword(password);
+
+
+  // DB Insertion
+
+  await connectDB();
+
+  await PendingUser.create({
+    email,
+    password: hashedPassword,
+    name,
+    position,
+    phoneNum,
+    contactEmail,
+    companyName,
+    abn,
+    companyWebsite,
+    businessAddress,
+    yearsInBiz,
+    numOfActiveClients,
+    socialMediaLinks,
+    companyStructure,
+    primaryServices,
+    industriesWorkWith,
+    regionsServe,
+    serviceModel,
+    monthlyProjectVolume,
+    isUsingWhiteLabelProvider,
+    challengeDetail,
+    isAgency: false,
+    role: "user"
+  })
+
+
+  // Email Sending
+  try {
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: String(process.env.SMTP_USER),
+        pass: String(process.env.SMTP_PASS)
+      },
+    });
+
+    const html = generatePartnershipEmailTemplate(email, monthlyProjectVolume, name, position, phoneNum, contactEmail, companyName, abn, companyWebsite, businessAddress, yearsInBiz, numOfActiveClients, companyStructure, serviceModel, isUsingWhiteLabelProvider, primaryServices, industriesWorkWith, regionsServe, challengeDetail);
+    const userHtml = generateApplicationReceivedUserEmail(name, companyName, email);
+
+    await transporter.sendMail({
+      from: '"Invenza" <admin@invenzadigitalmarketing.com>',
+      to: [email, 'admin@invenzadigitalmarketing.com', 'clients@invenzadigitalmarketing.com'],
+      subject: "Thanks for your interest in becoming a client of Invenza",
+      html: userHtml,
+    })
+
+    await transporter.sendMail({
+      from: '"Invenza" <admin@invenzadigitalmarketing.com>',
+      to: ['admin@invenzadigitalmarketing.com', 'clients@invenzadigitalmarketing.com'],
+      subject: "New User Application – Review Required",
+      html,
+    })
+
+    return {
+      success: true
+    }
+
+  } catch (error) {
+    return {
+      err: error.message
+    }
+  }
+}
+
 export const signOutUser = async (prevState, formData) => {
   (await cookies()).delete("authToken");
   (await cookies()).delete("user");

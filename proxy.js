@@ -11,7 +11,7 @@ export function proxy(request) {
     response.cookies.set("userCountry", country, { path: "/" });
     response.cookies.set("userRegion", region, { path: "/" });
 
-    if (pathname.startsWith("/login") || pathname.startsWith("/signup") || pathname.startsWith("/forgot-password") || pathname.startsWith('/reset-password') || pathname.startsWith('/verify-otp')) {
+    if (pathname.startsWith("/login") || pathname.startsWith("/become-a-partner") || pathname.startsWith("/become-a-client") || pathname.startsWith("/forgot-password") || pathname.startsWith('/reset-password') || pathname.startsWith('/verify-otp')) {
         return response;
     }
 

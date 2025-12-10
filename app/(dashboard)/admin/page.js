@@ -4,7 +4,7 @@ import PendingUserTable from '@/components/superadminComponents/PendingUserTable
 import UserTable from '@/components/superadminComponents/UserTable';
 import { Button } from '@/components/ui/button';
 
-import { getAllDeletedUsers, getAllPendingUsers, getAllUsers } from '@/lib/admin'
+import { getAllDeletedUsers, getAllPendingUsers, getAllSimpleUsers, getAllUsers } from '@/lib/admin'
 import { getUser } from '@/lib/user';
 import Link from 'next/link';
 
@@ -15,7 +15,7 @@ export const metadata = {
 const SuperAdminPage = async () => {
     const user = await getUser();
     const pendingUsers = await getAllPendingUsers();
-    const allUsers = await getAllUsers();
+    const allUsers = await getAllSimpleUsers();
     const deletedUser = await getAllDeletedUsers();
 
     return (
@@ -40,7 +40,7 @@ const SuperAdminPage = async () => {
                 <h1 className="font-bold text-2xl md:text-4xl">All Agencies</h1>
                 <div className='mt-6'>
                     {allUsers?.length === 0 && <div className='text-center p-6 text-background'>No Users Registered!</div>}
-                    {allUsers?.length > 0 && <UserTable users={allUsers} />}
+                    {allUsers?.length > 0 && <UserTable currentUser={user} users={allUsers} />}
                 </div>
             </Container>
 

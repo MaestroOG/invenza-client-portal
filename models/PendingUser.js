@@ -94,6 +94,10 @@ const pendingUserSchema = new Schema({
     role: {
         type: String,
         enum: ["user", "admin", "superadmin"]
+    },
+    isAgency: {
+        type: Boolean,
+        default: true
     }
 }, { timestamps: true })
 

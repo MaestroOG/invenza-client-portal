@@ -15,6 +15,7 @@ import {
   DialogTitle,
   DialogFooter,
 } from "@/components/ui/dialog"
+import { Separator } from "@/components/ui/separator"
 import Loader from "./Loader";
 
 export function LoginForm({
@@ -83,8 +84,17 @@ export function LoginForm({
         <div className="text-center text-sm text-background">
           Don&apos;t have an account?{" "}
           <br />
-          <Link href="/signup" className="underline underline-offset-4">
+          <Link href="/become-a-partner" className="underline underline-offset-4">
             Apply to become a partner
+          </Link>
+          <br />
+          <div className="my-1 flex items-center justify-center gap-2">
+            <Separator />
+            OR
+            <Separator />
+          </div>
+          <Link href="/become-a-client" className="underline underline-offset-4">
+            Apply to become a client
           </Link>
         </div>
       </form>

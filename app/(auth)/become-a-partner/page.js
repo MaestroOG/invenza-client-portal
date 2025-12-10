@@ -2,7 +2,7 @@ import { SignUpForm } from "@/components/signup-form";
 import Image from "next/image";
 
 export const metadata = {
-    title: "Sign Up"
+    title: "Become a Partner - Invenza"
 }
 
 export default function SignUpPage() {
