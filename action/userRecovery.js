@@ -19,7 +19,7 @@ export async function getRecoveryEmail(prevState, formData) {
     }
 
     const transporter = createTransporter();
-    const html = generateRecoveryEmailTemplate(`https://portal.invenza.com/reset-password?email=${user?.email}`);
+    const html = generateRecoveryEmailTemplate(`https://portal.invenzadigitalmarketing.com/reset-password?email=${user?.email}`);
 
     await transporter.sendMail({
         from: '"Invenza" <admin@invenzadigitalmarketing.com>',

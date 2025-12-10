@@ -159,7 +159,7 @@ export const generatePartnershipEmailTemplate = (email, monthlyProjectVolume, na
                 </table>
 
                       <p style="margin:14px 0 0; font-size:12px; color:#6b7280;">
-                        Manage this request in the <a href="https://portal.invenza.com" style="color:#2563eb;">Portal</a>.
+                        Manage this request in the <a href="https://portal.invenzadigitalmarketing.com" style="color:#2563eb;">Portal</a>.
                       </p>
                     </td>
                   </tr>
@@ -219,12 +219,12 @@ export const generateAcceptEmailTemplate = () => {
 
         <!-- New sentence -->
         <p style="font-size:15px; line-height:1.6; margin-top:20px; text-align:center; color:#444;">
-          Want to learn how to use the portal? <a href="https://portal.Invenza.com/how-to" target="_blank" style="color:#0d47a1; font-weight:600; text-decoration:none;">Watch this video first</a>.
+          Want to learn how to use the portal? <a href="https://portal.invenzadigitalmarketing.com/how-to" target="_blank" style="color:#0d47a1; font-weight:600; text-decoration:none;">Watch this video first</a>.
         </p>
 
         <!-- Call to Action -->
         <div style="text-align:center; margin:30px 0;">
-          <a href="https://portal.Invenza.com/login" target="_blank" 
+          <a href="https://portal.invenzadigitalmarketing.com/login" target="_blank" 
              style="background-color:#F9FE02; color:#000000; text-decoration:none; padding:14px 28px; border-radius:8px; font-size:16px; font-weight:600; display:inline-block;">
              Log In to Client Portal
           </a>
@@ -242,7 +242,7 @@ export const generateAcceptEmailTemplate = () => {
       <td align="center" style="background-color:#f0f3f9; padding:20px;">
         <p style="margin:0; font-size:13px; color:#777;">
           © 2025 Invenza. All rights reserved.<br/>
-          <a href="https://Invenza.com" style="color:#0d47a1; text-decoration:none;">Visit our website</a>
+          <a href="https://invenzadigitalmarketing.com" style="color:#0d47a1; text-decoration:none;">Visit our website</a>
         </p>
       </td>
     </tr>
@@ -507,7 +507,7 @@ export const generateApplicationReceivedUserEmail = (name, companyName, email) =
                 Invenza · Australia
               </p>
               <p class="muted" style="margin:8px 0 0 0;font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:18px;color:#6b7280;">
-                Need help? <a href="mailto:support@Invenza.com" style="color:#2563eb;text-decoration:none;">support@Invenza.com</a>
+                Need help? <a href="mailto:support@invenza.com" style="color:#2563eb;text-decoration:none;">support@invenza.com</a>
               </p>
             </td>
           </tr>
