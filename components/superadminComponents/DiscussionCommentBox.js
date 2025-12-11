@@ -26,7 +26,6 @@ const DiscussionCommentBox = ({ id }) => {
                     value={value}
                     tabIndex={1}
                     onBlur={newContent => setValue(newContent)}
-                    onChange={newContent => { }}
                 />
                 <input type="hidden" name="opinion" value={value} />
                 <input type="hidden" name="discussionId" value={id} />

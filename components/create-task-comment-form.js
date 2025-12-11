@@ -25,7 +25,6 @@ const CreateTaskCommentForm = ({ id }) => {
                 value={value}
                 tabIndex={1}
                 onBlur={newContent => setValue(newContent)}
-                onChange={newContent => { }}
             />
             <input type="hidden" name="commentText" value={value} />
             <input type="hidden" name='taskId' value={id} />
