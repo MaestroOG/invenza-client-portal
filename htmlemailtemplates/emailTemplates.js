@@ -209,10 +209,7 @@ export const generateAcceptEmailTemplate = () => {
         <p style="font-size:16px; line-height:1.6; margin-top:15px;">
           We’re excited to let you know that your request for a <strong>partnership with Invenza</strong> has been <span style="color:green; font-weight:bold;">accepted</span>.
         </p>
-        <!-- New credit line -->
-        <p style="font-size:16px; line-height:1.6; color:#333;">
-          You’ve also been <strong>credited 250 AUD</strong> by our admin team to help you get started.
-        </p>
+      
         <p style="font-size:16px; line-height:1.6;">
           You can now access your account and explore the <strong>Client Portal</strong>, where you’ll find all the tools and resources you need to get started.
         </p>
@@ -421,51 +418,60 @@ export const generateApplicationReceivedUserEmail = (name, companyName, email) =
   <title>Thank you for your interest</title>
   <style>
     /* Prevent iOS auto-link styling */
-    a[x-apple-data-detectors] { color: inherit !important; text-decoration: none !important; }
-    /* Dark mode hints (some clients respect this) */
+    a[x-apple-data-detectors] {
+      color: inherit !important;
+      text-decoration: none !important;
+    }
+
+    /* Dark mode override (force light theme) */
     @media (prefers-color-scheme: dark) {
-      .bg { background: #0b0c10 !important; }
-      .card { background: #121317 !important; }
-      .text { color: #e8e8ea !important; }
-      .muted { color: #b8bac1 !important; }
-      .btn { background: #2563eb !important; color: #000000 !important; }
-      .divider { border-color: #2a2d36 !important; }
+      .bg { background: #ffffff !important; }
+      .card { background: #ffffff !important; }
+      .text { color: #000000 !important; }
+      .muted { color: #333333 !important; }
+      .divider { border-color: #e5e7eb !important; }
     }
   </style>
 </head>
-<body class="bg" style="margin:0;padding:0;background:#f4f6fa;">
+
+<body class="bg" style="margin:0;padding:0;background:#ffffff;">
   <!-- Wrapper -->
-  <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background:#f4f6fa;margin:0;padding:30px 0;">
+  <table role="presentation" cellpadding="0" cellspacing="0" width="100%"
+    style="background:#ffffff;margin:0;padding:30px 0;">
     <tr>
       <td align="center" style="padding:0 16px;">
+
         <!-- Card -->
-        <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="max-width:640px;background:#000000;border-radius:12px;overflow:hidden;" class="card">
-          
+        <table role="presentation" cellpadding="0" cellspacing="0" width="100%"
+          style="max-width:640px;background:#ffffff;border-radius:12px;overflow:hidden;"
+          class="card">
 
           <!-- Hero -->
-          <!-- Hero -->
-<tr>
-  <td style="padding:24px 24px;background:#F9FE02;">
-    <h1 style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:24px;line-height:32px;color:#000000;font-weight:700;">
-      Thanks for your interest, ${name}!
-    </h1>
-  </td>
-</tr>
-
+          <tr>
+            <td style="padding:24px 24px;background:#F9FE02;">
+              <h1 style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:24px;line-height:32px;color:#000000;font-weight:700;">
+                Thanks for your interest, ${name}!
+              </h1>
+            </td>
+          </tr>
 
           <!-- Message -->
           <tr>
             <td style="padding:16px 28px 8px 28px;">
-              <p class="text" style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:24px;color:#1f2937;">
-                We’ve received your partner application for <strong>${companyName}</strong> and our team is now reviewing your information.
+              <p class="text"
+                style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:24px;color:#000000;">
+                We’ve received your partner application for
+                <strong>${companyName}</strong> and our team is now reviewing your information.
               </p>
             </td>
           </tr>
 
           <tr>
             <td style="padding:0 28px 16px 28px;">
-              <p class="muted" style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:22px;color:#6b7280;">
-                You’ll hear from us shortly with the next steps. In the meantime, feel free to reply to this email if you have any questions.
+              <p class="muted"
+                style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:22px;color:#333333;">
+                You’ll hear from us shortly with the next steps. In the meantime,
+                feel free to reply to this email if you have any questions.
               </p>
             </td>
           </tr>
@@ -473,28 +479,36 @@ export const generateApplicationReceivedUserEmail = (name, companyName, email) =
           <!-- Divider -->
           <tr>
             <td style="padding:8px 28px 0 28px;">
-              <hr class="divider" style="border:none;border-top:1px solid #e5e7eb;margin:0;">
+              <hr class="divider"
+                style="border:none;border-top:1px solid #e5e7eb;margin:0;">
             </td>
           </tr>
 
-          <!-- Summary (optional) -->
+          <!-- Summary -->
           <tr>
             <td style="padding:16px 28px 28px 28px;">
-              <p class="muted" style="margin:0 0 10px 0;font-family:Arial,Helvetica,sans-serif;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#9ca3af;">
+              <p class="muted"
+                style="margin:0 0 10px 0;font-family:Arial,Helvetica,sans-serif;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;">
                 Application Summary
               </p>
-              <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:22px;color:#374151;">
+
+              <table role="presentation" cellpadding="0" cellspacing="0" width="100%"
+                style="font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:22px;color:#000000;">
                 <tr>
-                  <td style="padding:6px 0;width:180px;color:#6b7280;">Applicant</td>
+                  <td style="padding:6px 0;width:180px;color:#333333;">Applicant</td>
                   <td style="padding:6px 0;font-weight:600;" class="text">${name}</td>
                 </tr>
                 <tr>
-                  <td style="padding:6px 0;color:#6b7280;">Company</td>
+                  <td style="padding:6px 0;color:#333333;">Company</td>
                   <td style="padding:6px 0;font-weight:600;" class="text">${companyName}</td>
                 </tr>
                 <tr>
-                  <td style="padding:6px 0;color:#6b7280;">Email</td>
-                  <td style="padding:6px 0;" class="text"><a href="mailto:${email}" style="color:#2563eb;text-decoration:none;">${email}</a></td>
+                  <td style="padding:6px 0;color:#333333;">Email</td>
+                  <td style="padding:6px 0;" class="text">
+                    <a href="mailto:${email}" style="color:#2563eb;text-decoration:none;">
+                      ${email}
+                    </a>
+                  </td>
                 </tr>
               </table>
             </td>
@@ -502,23 +516,31 @@ export const generateApplicationReceivedUserEmail = (name, companyName, email) =
 
           <!-- Footer -->
           <tr>
-            <td align="center" style="padding:22px;background:#f8fafc;">
-              <p class="muted" style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:18px;color:#6b7280;">
+            <td align="center" style="padding:22px;background:#ffffff;">
+              <p class="muted"
+                style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:18px;color:#333333;">
                 Invenza · Australia
               </p>
-              <p class="muted" style="margin:8px 0 0 0;font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:18px;color:#6b7280;">
-                Need help? <a href="mailto:support@invenza.com" style="color:#2563eb;text-decoration:none;">support@invenza.com</a>
+              <p class="muted"
+                style="margin:8px 0 0 0;font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:18px;color:#333333;">
+                Need help?
+                <a href="mailto:support@invenza.com" style="color:#2563eb;text-decoration:none;">
+                  support@invenza.com
+                </a>
               </p>
             </td>
           </tr>
+
         </table>
         <!-- /Card -->
+
       </td>
     </tr>
   </table>
   <!-- /Wrapper -->
 </body>
 </html>
+
   `;
 }
 
