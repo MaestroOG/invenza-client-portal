@@ -99,11 +99,11 @@ const Header = ({ userFromDB, pfpLink }) => {
             title: "FAQs",
             href: '/faqs'
         },
-        {
-            icon: <CircleDollarSign />,
-            title: "Pricing",
-            href: "/pricing"
-        },
+        // {
+        //     icon: <CircleDollarSign />,
+        //     title: "Pricing",
+        //     href: "/pricing"
+        // },
         {
             icon: <MessageCircle />,
             title: "Comments",
@@ -209,7 +209,7 @@ const Header = ({ userFromDB, pfpLink }) => {
                 <div className="flex items-center md:hidden">
                     <Drawer direction="left" >
                         <DrawerTrigger className='md:hidden'><Menu className='text-black' size={23}></Menu></DrawerTrigger>
-                        <DrawerContent className={'bg-foreground overflow-y-auto max-h-[100vh]'}>
+                        <DrawerContent className={'bg-foreground overflow-y-auto max-h-screen'}>
                             <DrawerHeader>
                                 <DrawerClose>
                                     <X className='text-black' />
@@ -241,7 +241,7 @@ const Header = ({ userFromDB, pfpLink }) => {
                                     <Link href="/profile">
                                         <Button className="flex items-center gap-2 w-full">
                                             <Settings size={32} />
-                                            <span className="text-white text-lg font-semibold">
+                                            <span className="text-black text-lg font-semibold">
                                                 Profile Setting
                                             </span>
                                         </Button>
