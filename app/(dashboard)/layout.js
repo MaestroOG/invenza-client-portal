@@ -6,6 +6,7 @@ import TawkToChat from "@/components/TawkToChat";
 import { getUser, getUserFromDB } from "@/lib/user";
 import NextTopLoader from "nextjs-toploader";
 import Script from "next/script";
+import WhatsappButton from "@/components/dashboardComponents/whatsapp-button";
 
 export const metadata = {
   title: "Invenza Client Portal",
@@ -53,8 +54,8 @@ export default async function RootLayout({ children }) {
           <Header userFromDB={userFromDB} pfpLink={user?.profilePictureUrl} />
           {children}
         </MainContent>
-        {user && user.role !== "superadmin" && <TawkToChat />}
-
+        <WhatsappButton />
+        {/* {user && user.role !== "superadmin" && <TawkToChat />} */}
       </body>
     </html>
   );
