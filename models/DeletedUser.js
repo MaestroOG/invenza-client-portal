@@ -77,7 +77,7 @@ const deletedUserSchema = new Schema({
     },
     serviceModel: {
         type: String,
-        enum: ["retainer-based", "project-based", "both"],
+        enum: ["retainer-based", "project-based", "product-based", "all"],
     },
     monthlyProjectVolume: {
         type: String,

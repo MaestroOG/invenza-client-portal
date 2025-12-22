@@ -43,7 +43,7 @@ const DeletePartnerForm = ({ userId }) => {
                                     id="sendFinalEmail"
 
                                 />
-                                <Label htmlFor="sendFinalEmail">Send partnership ending email</Label>
+                                <Label htmlFor="sendFinalEmail" className={'text-white'}>Send partnership ending email</Label>
                             </div>
 
                         </DialogDescription>
@@ -58,7 +58,7 @@ const DeletePartnerForm = ({ userId }) => {
                         <form action={formAction}>
                             <input type="hidden" name="userId" value={userId} />
                             <input type="hidden" name='sendFinalEmail' value={checked} />
-                            <Button type="submit" disabled={isPending} className="bg-red-600">
+                            <Button type="submit" disabled={isPending} className="bg-red-600 text-white">
                                 {isPending ? "Deleting..." : "Yes, Delete"}
                             </Button>
                         </form>
