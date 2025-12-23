@@ -8,21 +8,23 @@ const IntroText = async () => {
         <Container className={'bg-white p-4 rounded-lg max-sm:mt-0'}>
             <div className="max-w-2xl">
                 <h1 className="font-bold text-2xl md:text-4xl text-black">Welcome to the Invenza Portal, {user?.name} - {user?.agency || user?.companyName}</h1>
-                <p className="mt-3">This isn’t just a portal. It’s your direct line to projects, performance, and priority support, all built to keep your company moving forward without friction.</p>
+                <p className="mt-3">This portal is your central hub for staying informed, aligned, and in control of your digital marketing projects. Everything here is designed to help you track progress, access resources, and get the most value from our partnership.</p>
 
                 <ul className='list-disc marker:text-accent ml-6'>
-                    <li className='mt-3 text-2xl font-medium text-black text-indent-[-0.5em]'>Launch Projects Instantly</li>
-                    <p className="mt-1">Submit client campaigns in minutes. Our team picks it up and gets you moving within hours.</p>
-                    <li className='mt-3 text-2xl font-medium text-black text-indent-[-0.5em]'>Explore Services</li>
-                    <p className="mt-1">From SEO and Google Ads to web development, dive into clear service breakdowns designed to scale your company.</p>
-                    <li className='mt-3 text-2xl font-medium text-black text-indent-[-0.5em]'>Support on Demand</li>
-                    <p className="mt-1">Our live chat means no waiting around. Get answers, updates, and next steps whenever you need them.</p>
-                    <li className='mt-3 text-2xl font-medium text-black text-indent-[-0.5em]'>Fast-Tracked Delivery</li>
-                    <p className="mt-1">Every new project is picked up by Operations fast. No lag, no downtime, just momentum.</p>
+                    <li className='mt-3 text-2xl font-medium text-black text-indent-[-0.5em]'>Track & Manage Your Projects</li>
+                    <p className="mt-1">Monitor active campaigns, review updates, and stay on top of deliverables, all in one place, with full visibility.</p>
+                    <li className='mt-3 text-2xl font-medium text-black text-indent-[-0.5em]'>Learn & Get Answers</li>
+                    <p className="mt-1">Access step-by-step how-to videos, FAQs, and educational content to better understand your campaigns and our processes.</p>
+                    <li className='mt-3 text-2xl font-medium text-black text-indent-[-0.5em]'>Request Business Audits</li>
+                    <p className="mt-1">Request audits for areas such as your website, SEO, or social media to identify opportunities for improvement and growth.</p>
+                    <li className='mt-3 text-2xl font-medium text-black text-indent-[-0.5em]'>Helpful Resources, Anytime</li>
+                    <p className="mt-1">Explore guides, best practices, and tools created to support your ongoing growth and success.
+                    </p>
 
                 </ul>
 
-                <p className="mt-4">We can’t wait to support your company and it’s success.</p>
+                <p className="mt-4">If you have any questions or need assistance, you can reach us anytime via the WhatsApp chat link in the bottom corner.</p>
+                <p className="mt-4">We’re excited to work with you and support your business every step of the way.</p>
             </div>
         </Container>
     )
