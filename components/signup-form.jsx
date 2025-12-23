@@ -317,7 +317,7 @@ export function SignUpForm({
                                 <Textarea id="challengeDetail" value={formValues.challengeDetail} onChange={handleChange} name="challengeDetail" required={formValues.isUsingWhiteLabelProvider === 'yes' ? true : false} className={'border border-gray-300 text-background'} />
                             </div>
 
-                            <div className="flex gap-3">
+                            {/* <div className="flex gap-3">
                                 <Checkbox id="masterServiceAgreement" value={formValues.masterServiceAgreement} checked={formValues.masterServiceAgreement}
                                     onCheckedChange={(checked) =>
                                         setFormValues(prev => ({
@@ -333,7 +333,7 @@ export function SignUpForm({
                                         </Link>
                                     </span>
                                 </Label>
-                            </div>
+                            </div> */}
                         </>
                     )}
 
