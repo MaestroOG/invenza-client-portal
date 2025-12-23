@@ -126,12 +126,13 @@ export const SignUpUser = async (formValues, prevState, formData) => {
     serviceModel,
     monthlyProjectVolume,
     isUsingWhiteLabelProvider,
-    challengeDetail } = formValues;
+    challengeDetail,
+    masterServiceAgreement } = formValues;
 
 
   // Validations
 
-  if (!isValidEmail(email) || password.length < 6 || !name) {
+  if (!isValidEmail(email) || password.length < 6 || !name || !masterServiceAgreement) {
     return {
       err: "Please fill the form correctly."
     }
@@ -233,12 +234,13 @@ export const createClientUser = async (formValues, prevState, formData) => {
     serviceModel,
     monthlyProjectVolume,
     isUsingWhiteLabelProvider,
-    challengeDetail } = formValues;
+    challengeDetail,
+    masterServiceAgreement } = formValues;
 
 
   // Validations
 
-  if (!isValidEmail(email) || password.length < 6 || !name) {
+  if (!isValidEmail(email) || password.length < 6 || !name || !masterServiceAgreement) {
     return {
       err: "Please fill the form correctly."
     }

@@ -44,6 +44,7 @@ export function BecomeClientForm({
         monthlyProjectVolume: "",
         isUsingWhiteLabelProvider: "yes",
         challengeDetail: "",
+        masterServiceAgreement: false,
     });
 
     const [message, formAction, isPending] = useActionState(createClientUser.bind(null, formValues), { err: "", success: false });
@@ -314,6 +315,24 @@ export function BecomeClientForm({
                             <div className="grid gap-3">
                                 <Label htmlFor="challengeDetail" className={'text-background'}>If yes, what challenges have you faced?</Label>
                                 <Textarea id="challengeDetail" value={formValues.challengeDetail} onChange={handleChange} name="challengeDetail" required={formValues.isUsingWhiteLabelProvider === 'yes' ? true : false} className={'border border-gray-300 text-background'} />
+                            </div>
+
+                            <div className="flex gap-3">
+                                <Checkbox id="masterServiceAgreement" value={formValues.masterServiceAgreement} checked={formValues.masterServiceAgreement}
+                                    onCheckedChange={(checked) =>
+                                        setFormValues(prev => ({
+                                            ...prev,
+                                            masterServiceAgreement: checked,
+                                        }))
+                                    } name="masterServiceAgreement" />
+                                <Label htmlFor="masterServiceAgreement" className={'text-heading'}>
+                                    I agree to the Invenza Digital Marketing
+                                    <span>
+                                        <Link href={'/invenza-msa.pdf'} target="_blank" className="text-link underline">
+                                            Master Services Agreement
+                                        </Link>
+                                    </span>
+                                </Label>
                             </div>
                         </>
                     )}
