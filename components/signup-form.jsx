@@ -317,7 +317,7 @@ export function SignUpForm({
                                 <Textarea id="challengeDetail" value={formValues.challengeDetail} onChange={handleChange} name="challengeDetail" required={formValues.isUsingWhiteLabelProvider === 'yes' ? true : false} className={'border border-gray-300 text-background'} />
                             </div>
 
-                            {/* <div className="flex gap-3">
+                            <div className="flex gap-3">
                                 <Checkbox id="masterServiceAgreement" value={formValues.masterServiceAgreement} checked={formValues.masterServiceAgreement}
                                     onCheckedChange={(checked) =>
                                         setFormValues(prev => ({
@@ -328,12 +328,12 @@ export function SignUpForm({
                                 <Label htmlFor="masterServiceAgreement" className={'text-heading'}>
                                     I agree to the Invenza Digital Marketing
                                     <span>
-                                        <Link href={'/invenza-msa.pdf'} target="_blank" className="text-link underline">
+                                        <Link href={'/invenza-partner-msa.pdf'} target="_blank" className="text-link underline">
                                             Master Services Agreement
                                         </Link>
                                     </span>
                                 </Label>
-                            </div> */}
+                            </div>
                         </>
                     )}
 

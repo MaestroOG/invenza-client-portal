@@ -4,12 +4,18 @@ import { generateRejectEmailTemplate } from "@/htmlemailtemplates/emailTemplates
 import { connectDB } from "@/lib/mongodb";
 import PendingUser from "@/models/PendingUser";
 import RejectedUser from "@/models/RejectedUser";
+import mongoose from "mongoose";
 import { revalidatePath } from "next/cache";
 import nodemailer from 'nodemailer';
 
 
 export async function rejectUser(prevState, formData) {
     const userId = formData.get('userId');
+
+    if (!mongoose.Types.ObjectId.isValid(userId)) {
+        console.error("Invalid user ID");
+        return { err: "Invalid user ID" };
+    }
 
     try {
         await connectDB();
@@ -44,8 +50,9 @@ export async function rejectUser(prevState, formData) {
             html,
         })
 
-        revalidatePath('/admin', "layout");
+        revalidatePath('/', "layout");
     } catch (error) {
+        console.error(error.message)
         return { err: "Failed to reject user" };
     }
 }
