@@ -24,7 +24,7 @@ const ResetPasswordForm = ({ email }) => {
                     <div className="flex flex-col gap-6">
                         <div className="grid gap-2">
                             <Label htmlFor="password">Password</Label>
-                            <Input name="password" id="password" type="password" required />
+                            <Input name="password" id="password" type="password" required className={'text-white placeholder:text-white'} />
                         </div>
                     </div>
                 </CardContent>
